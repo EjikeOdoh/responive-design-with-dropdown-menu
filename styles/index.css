@@ -1,0 +1,149 @@
+:root {
+    /* Color variables */
+    --Gray-50: hsl(0, 0%, 98%);
+    --Gray-500: hsl(0, 0%, 41%);
+    --Gray-950: hsl(0, 0%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Epilogue", sans-serif;
+    font-size: 1.125rem;
+    color: var(--Gray-500);
+}
+
+header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+header nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Gray-500);
+    font-weight: 500;
+}
+
+header>button {
+    display: none;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-nav button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--Gray-500);
+    font-weight: 500;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.right-nav a:last-child {
+    border: 2px solid var(--Gray-500);
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    padding: 50px 150px;
+    gap: 200px;
+    height: 800px;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: flex-end;
+}
+
+.top h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    color: var(--Gray-950);
+}
+
+.top p {
+    font-weight: 500;
+}
+
+.top button {
+    background-color: var(--Gray-950);
+    color: var(--Gray-50);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.brands {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.brand {
+    flex: 1;
+}
+
+.right {
+    height: 100%;
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
