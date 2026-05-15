@@ -35,6 +35,8 @@ body {
     font-family: "Epilogue", sans-serif;
     font-size: 1.125rem;
     color: var(--Gray-500);
+    max-width: 1440px;
+    margin: auto;
 }
 
 header {
@@ -51,10 +53,18 @@ header nav {
     justify-content: space-between;
     color: var(--Gray-500);
     font-weight: 500;
+    position: relative;
 }
 
 header>button {
     display: none;
+}
+
+main {
+    display: flex;
+    padding: 50px 150px;
+    height: 700px;
+    gap: 80px;
 }
 
 .left-nav {
@@ -71,6 +81,20 @@ header>button {
     font-weight: 500;
 }
 
+.left-nav button:first-child {
+    width: fit-content;
+}
+
+.features {
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+.features a {
+    display: flex;
+}
+
 .right-nav {
     display: flex;
     align-items: center;
@@ -81,13 +105,6 @@ header>button {
     border: 2px solid var(--Gray-500);
     border-radius: 15px;
     padding: 10px 20px;
-}
-
-main {
-    display: flex;
-    padding: 50px 150px;
-    gap: 200px;
-    height: 800px;
 }
 
 .left,
@@ -108,17 +125,19 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .top h1 {
-    font-size: 3.3rem;
+    font-size: 5rem;
     font-weight: 700;
     color: var(--Gray-950);
+    anchor-name: --features;
 }
 
 .top p {
     font-weight: 500;
+    padding-right: 50px;
 }
 
 .top button {
@@ -134,6 +153,7 @@ main {
     gap: 50px;
     align-items: center;
 }
+
 .brand {
     flex: 1;
 }
@@ -146,4 +166,50 @@ main {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+
+@media screen and (max-width: 375px) {
+    header {
+        padding: 20px 10px;
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header>button {
+        display: block;
+    }
+
+    main {
+        padding: 0;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .left {
+        padding: 10px;
+        gap: 50px;
+    }
+
+    .top {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .top h1 {
+        font-size: 2rem;
+    }
+
+    .top p {
+        padding-right: 0;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+
+    .brands {
+        gap: 20px;
+    }
 }
