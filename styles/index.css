@@ -37,6 +37,7 @@ body {
     color: var(--Gray-500);
     max-width: 1440px;
     margin: auto;
+    background-color: var(--Gray-50);
 }
 
 header {
@@ -77,12 +78,58 @@ main {
     gap: 50px;
 }
 
+.left-nav > * {
+    padding-block: 10px;
+}
+
 .left-nav button {
     display: flex;
     align-items: center;
     gap: 6px;
     color: var(--Gray-500);
     font-weight: 500;
+    position: relative;
+}
+
+.left-nav button div{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 14px;
+    align-items: flex-start;
+    background-color: lightgray;
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+
+#features div {
+    display: none;
+    right: 0;
+}
+
+#features:hover div {
+    display: flex;
+}
+
+#company div {
+    display: none;
+    left: 0;
+}
+
+#company:hover div {
+    display: flex;
+}
+
+.left-nav button div a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    text-wrap: nowrap;
 }
 
 .left-nav button:first-child {
