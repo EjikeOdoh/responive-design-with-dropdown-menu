@@ -56,6 +56,10 @@ header nav {
     position: relative;
 }
 
+nav a:hover, nav button:hover {
+    color: var(--Gray-950);
+}
+
 header>button {
     display: none;
 }
@@ -107,6 +111,10 @@ main {
     padding: 10px 20px;
 }
 
+.right-nav a:last-child:hover {
+    border-color: var(--Gray-950);
+}
+
 .left,
 .right {
     flex: 1;
@@ -144,8 +152,14 @@ main {
     background-color: var(--Gray-950);
     color: var(--Gray-50);
     font-weight: 700;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.top button:hover {
+    background-color: var(--Gray-50);
+    color: var(--Gray-950);
+    border: 1px solid var(--Gray-950);
 }
 
 .brands {
