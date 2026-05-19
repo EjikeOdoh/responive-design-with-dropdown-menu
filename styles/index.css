@@ -231,7 +231,13 @@ main {
 }
 
 #mobile-menu {
-    display: none;
+    display: none; 
+}
+
+/* Generic class */
+.hidden {
+    display: none !important;
+    border: 2px solid brown;
 }
 
 
