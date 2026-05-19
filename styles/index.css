@@ -57,7 +57,8 @@ header nav {
     position: relative;
 }
 
-nav a:hover, nav button:hover {
+nav a:hover,
+nav button:hover {
     color: var(--Gray-950);
 }
 
@@ -78,7 +79,7 @@ main {
     gap: 50px;
 }
 
-.left-nav > * {
+.left-nav>* {
     padding-block: 10px;
 }
 
@@ -91,7 +92,7 @@ main {
     position: relative;
 }
 
-.left-nav button div{
+.left-nav button div {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -229,6 +230,10 @@ main {
     object-fit: contain;
 }
 
+#mobile-menu {
+    display: none;
+}
+
 
 @media screen and (max-width: 375px) {
     header {
@@ -272,5 +277,66 @@ main {
 
     .brands {
         gap: 20px;
+    }
+
+    #mobile-menu {
+        display: flex;
+        width: 60%;
+        padding: 20px;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    #mobile-menu a,
+    #mobile-menu button {
+        color: var(--Gray-500);
+    }
+
+    #mobile-menu>button {
+        align-self: flex-end;
+    }
+
+    #mobile-menu>div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #mobile-menu>div>button {
+        text-align: left;
+    }
+
+    .m-top {
+        gap: 30px;
+    }
+
+    .m-bottom {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .m-bottom a:last-child {
+        border: 2px solid var(--Gray-500);
+        border-radius: 15px;
+        padding: 10px 20px;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    .dropdown a {
+        display: flex;
+        gap: 10px;
     }
 }
