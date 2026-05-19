@@ -237,7 +237,6 @@ main {
 /* Generic class */
 .hidden {
     display: none !important;
-    border: 2px solid brown;
 }
 
 
